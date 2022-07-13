@@ -1,0 +1,255 @@
+.slider {
+  position:relative;
+	z-index: 1;
+	/*↑z-indexの値をh1のz-indexの値よりも小さくして背景に回す*/
+	height: calc(100vh - 80px);/*スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+}
+/*　背景画像設定　*/
+
+.slider-item01 {
+    background:url(img/img1.jpeg);
+}
+
+.slider-item02 {
+    background:url(img/img2.jpeg);
+}
+
+.slider-item03 {
+    background:url(img/img3.jpeg);
+}
+
+.slider-item {
+    width: 100%;/*各スライダー全体の横幅を画面の高さいっぱい（100%）にする*/
+    height: calc(100vh - 80px);/*各スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+    background-repeat: no-repeat;/*背景画像をリピートしない*/
+    background-position: center;/*背景画像の位置を中央に*/
+    background-size: cover;/*背景画像が.slider-item全体を覆い表示*/
+}
+
+/*矢印の設定*/
+
+.slick-prev, 
+.slick-next {
+    position: absolute;
+	z-index: 3;
+    top: 42%;
+    cursor: pointer;/*マウスカーソルを指マークに*/
+    outline: none;/*クリックをしたら出てくる枠線を消す*/
+    border-top: 2px solid #fff;/*矢印の色*/
+    border-right: 2px solid #fff;/*矢印の色*/
+    height: 25px;
+    width: 25px;
+}
+
+.slick-prev {/*戻る矢印の位置と形状*/
+    left:2.5%;
+    transform: rotate(-135deg);
+}
+
+.slick-next {/*次へ矢印の位置と形状*/
+    right:2.5%;
+    transform: rotate(45deg);
+}
+
+/*ドットナビゲーションの設定*/
+
+.slick-dots {
+	position: relative;
+	z-index: 3;
+    text-align:center;
+	margin:-50px 0 0 0;/*ドットの位置*/
+}
+
+.slick-dots li {
+    display:inline-block;
+	margin:0 5px;
+}
+
+.slick-dots button {
+    color: transparent;
+    outline: none;
+    width:8px;/*ドットボタンのサイズ*/
+    height:8px;/*ドットボタンのサイズ*/
+    display:block;
+    border-radius:50%;
+    background:#fff;/*ドットボタンの色*/
+}
+
+.slick-dots .slick-active button{
+    background:#333;/*ドットボタンの現在地表示の色*/
+}
+/* -------------
+common
+---------------- */
+body {
+  font-size: 14px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+.wrapper {
+  max-width: 1024px;
+  padding: 0 4%;
+  margin: 0 auto;
+}
+
+
+
+/* ----------------
+header 
+------------------- */
+#header {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  font-size: 20px;
+  margin-bottom: 150px;
+}
+#header .name {
+  padding: 18px 0;
+}
+#header h1 {
+  font-size: 32px;
+  color:rgb(245, 186, 239);
+}
+#header h2 {
+  font-size: 12px;
+  font-weight: normal;
+}
+#header ul {
+  display: flex;
+}
+#header li {
+  margin-left: 30px;
+  line-height: 80px;
+  padding: 0 5px;
+}
+#header a {
+  color: rgb(245, 186, 239)
+}
+/* #header li:hover {
+  background: rgb(245, 186, 239);
+} */
+
+/* --------------------
+profile
+---------------------- */
+#profile {
+  margin-bottom: 250px;
+}
+.section-title {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 5px solid rgb(245, 186, 239);
+}
+.ja {
+  letter-spacing: 10px;
+  font-size: 40px;
+  padding-bottom: 20px;
+  color:rgb(245, 186, 239);
+}
+#profile .flex {
+  display: flex;
+  justify-content: space-between;
+}
+#profile .img2 {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-image: url(img/profile.png);
+  background-size: cover;
+  margin-top: 100px;
+}
+#profile .img1 {
+  width: 40%;
+}
+#profile .text {
+  width: 55%;
+}
+#profile .text h3 {
+  font-size: 40px;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 60px;
+  color:rgb(245, 186, 239);
+}
+#profile .flex2 {
+  display: flex;
+}
+#profile .left {
+  width: 50%;
+  padding-right: 40px;
+}
+#profile .left dl {
+  display: flex;
+  flex-wrap: wrap;
+}
+#profile dt {
+  width: 50%;
+  margin-bottom: 40px;
+  color:rgb(245, 186, 239);
+}
+#profile dd {
+  width: 50%;
+}
+#profile .right {
+  width: 50%;
+}
+#profile .right dl {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+/* -------------------
+movie
+--------------------- */
+#movie .item-title {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+#movie iframe {
+  margin-bottom: 90px;
+}
+#movie .item1 .item-title {
+  margin-top: 30px;
+}
+#movie .item2 {
+  text-align: right;
+}
+
+
+/* -------------------
+footer
+--------------------- */
+#footer {
+  background: rgb(237, 235, 235);
+}
+#footer .sns-title {
+  font-size: 32px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  text-align: center;
+}
+#footer .sns {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+#footer .instagram {
+  width: 45%;
+}
+#footer .youtube {
+  width: 45%;
+}
+#footer small p {
+  text-align: center;
+  padding-bottom: 20px;
+}
